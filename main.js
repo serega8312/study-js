@@ -1,4 +1,10 @@
+const userInfos = [];
+const myModal = document.getElementById('exampleModal');
+myModal.addEventListener('shown.bs.modal', function () {
+  userInfos.push(getUserInfo());
 
+  showUserInfos(userInfos);
+})
 
 function getFamilyStatus(isMarried, isMale) {
 
@@ -45,7 +51,16 @@ function getUserInfoText(userInfo) {
   return userInfo.name + ' ' + userInfo.age + ' ' + getFamilyStatus(userInfo.isMarried, userInfo.isMale);
 }
 
-const myModal = document.getElementById('exampleModal');
-myModal.addEventListener('shown.bs.modal', function () {
-  showUserInfo(getUserInfo());
-})
+
+
+function showUserInfos(userInfos) {
+  const div = document.getElementById('userInfo');
+  div.innerHTML = '';
+  for (let i in userInfos) {
+    let userInfo = userInfos[i];
+    div.innerHTML += getUserInfoText(userInfo);
+    div.innerHTML += '<br />';
+  }
+
+
+}
