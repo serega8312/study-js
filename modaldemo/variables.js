@@ -1,5 +1,5 @@
-const name='test';
-const nuber =5;
+const name = 'test';
+const nuber = 5;
 //почистил картошку
 //помыл картоку
 //включил плиту
@@ -8,40 +8,55 @@ const nuber =5;
 //дождался когда картошка приготовилась 
 //выключил плиту 
 // поел
-function peelPotato(){ 
-console.log('почистил картошку');
+function peelPotato(potato) {
+  say('почистил ' + potato.toText());
 }
-function woshPotato(){
-  console.log('помыл картоку');
+function washPotato(potato) {
+  say('помыл ' + potato.toText());
 }
-function turnOnStove(){
-  console.log('включил плиту');
+function turnOnStove() {
+  say('включил плиту');
 }
-function putWater(){
-  console.log('поставил воду ');
+function putWater() {
+  say('поставил воду ');
 }
-function throwPotato(){
-  console.log('бросил в воду картошку');
+function throwPotato(potato) {
+  say('бросил в воду ' + potato.toText());
 }
-function waitPotato(){
-  console.log('дождался когда картошка приготовилась');
+function waitPotato() {
+  say('дождался когда картошка приготовилась');
 }
-function turnOffStove(){
-  console.log('выключил плиту');
+function turnOffStove() {
+  say('выключил плиту');
 }
-function eat(){
-  console.log(' поел');
+function eat(potato) {
+  say(' поел ' + potato.toText());
+}
+function say(text) {
+  $('#content').append(`<div class="card"> <div class="card-body">${text}</div></div>`);
+
 }
 
-function dinner(){
-  peelPotato();
-  woshPotato();
+function dinner() {
+  let potato = {
+    name: 'картошка',
+    count: 5,
+    toText: function () {
+      return this.name + ' ' + this.count + ' штук'
+    }
+
+  };
+  peelPotato(potato);
+  washPotato(potato);
   turnOnStove();
   putWater();
-  throwPotato();
+  throwPotato(potato);
   waitPotato();
   turnOffStove();
-  eat();
+  eat(potato);
 
 }
+
+
 dinner();
+
