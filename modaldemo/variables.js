@@ -15,7 +15,7 @@ function washPotato(potato) {
   say('помыл ' + potato.toText(),'even');
 }
 function turnOnStove() {
-  say('включил плиту','odd');
+  say('включил плиту','odd red');
 }
 function putWater() {
   say('поставил воду ','even');
@@ -24,7 +24,7 @@ function throwPotato(potato) {
   say('бросил в воду ' + potato.toText(),'odd');
 }
 function waitPotato() {
-  say('дождался когда картошка приготовилась','even');
+  say('дождался когда картошка приготовилась','even red');
 }
 function turnOffStove() {
   say('выключил плиту','odd');

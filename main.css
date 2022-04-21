@@ -1,10 +1,29 @@
-.even{
+/* 
   background: #09e709de;
 }
-.odd{
+
+.odd {
   background: #8ae543;
 }
 
-.card{
+
+.red {
+  color: red
+} */
+
+.card {
   font-family: cursive;
 }
+.card:nth-child(even){
+  background: #09e709de;
+ 
+}
+.card:nth-child(odd){
+  background: #8ae543;
+ 
+}
+.card:nth-child(3n){
+  color: red;
+}
+
+
