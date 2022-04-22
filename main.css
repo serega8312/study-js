@@ -13,17 +13,23 @@
 
 .card {
   font-family: cursive;
+  
 }
-.card:nth-child(even){
+
+.card:nth-child(even) {
   background: #09e709de;
- 
+
 }
-.card:nth-child(odd){
+
+.card:nth-child(odd) {
   background: #8ae543;
- 
+
 }
-.card:nth-child(3n){
+
+.card:nth-child(3n) {
   color: red;
 }
 
-
+.card-body{
+  margin: auto;
+}

@@ -9,30 +9,30 @@ const nuber = 5;
 //выключил плиту 
 // поел
 function peelPotato(potato) {
-  say('почистил ' + potato.toText(),'odd');
+  say('почистил ' + potato.toText(), 'odd');
 }
 function washPotato(potato) {
-  say('помыл ' + potato.toText(),'even');
+  say('помыл ' + potato.toText(), 'even');
 }
 function turnOnStove() {
-  say('включил плиту','odd red');
+  say('включил плиту', 'odd red');
 }
 function putWater() {
-  say('поставил воду ','even');
+  say('поставил воду ', 'even');
 }
 function throwPotato(potato) {
-  say('бросил в воду ' + potato.toText(),'odd');
+  say('бросил в воду ' + potato.toText(), 'odd');
 }
 function waitPotato() {
-  say('дождался когда картошка приготовилась','even red');
+  say('дождался когда картошка приготовилась', 'even red');
 }
 function turnOffStove() {
-  say('выключил плиту','odd');
+  say('выключил плиту', 'odd');
 }
 function eat(potato) {
-  say(' поел ' + potato.toText(),'even');
+  say(' поел ' + potato.toText(), 'even');
 }
-function say(text,cssClass) {
+function say(text, cssClass) {
   $('#content').append(`<div class="card ${cssClass}"> <div class="card-body">${text}</div></div>`);
 
 }
@@ -56,6 +56,7 @@ function dinner() {
   eat(potato);
 
 }
+
 
 
 dinner();
