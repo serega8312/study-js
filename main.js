@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  $('#dinner').click(function () {
+    $('#content').html("");
+    dinner();
+  })
   $('#modaldemo').click(function () {
     $('#content').load("modaldemo/modal.html");
   })
@@ -14,3 +18,4 @@ $(document).ready(function () {
   })
 
 });
+
