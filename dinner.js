@@ -32,10 +32,9 @@ function turnOffStove() {
 function eat(potato) {
   say(' поел ' + potato.toText(), 'even');
 }
-function say(text, cssClass) {
-  $('#content').append(`<div class="card ${cssClass}"> <div class="card-body">${text}</div></div>`);
 
-}
+
+
 
 function dinner() {
   let potato = {

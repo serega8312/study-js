@@ -27,6 +27,13 @@ $(document).ready(function () {
 });
 
 function say(text, cssClass) {
-  $('#content').append(`<div class="card ${cssClass}"> <div class="card-body">${text}</div></div>`);
+  if (!cssClass) {
+    $('#content').append(`<div class="card"> <div class="card-body">${text}</div></div>`);
+
+  }
+  else{
+    $('#content').append(`<div class="card ${cssClass}"> <div class="card-body">${text}</div></div>`);
+  }
+  
 
 }
