@@ -13,7 +13,7 @@
 
 .card {
   font-family: cursive;
-  
+
 }
 
 .card:nth-child(even) {
@@ -30,6 +30,16 @@
   color: red;
 }
 
-.card-body{
+.card-body {
   margin: auto;
+}
+
+.change-display .card:nth-child(even) {
+  background: #09bbe7de;
+
+}
+
+.change-display .card:nth-child(odd) {
+  background: #c4f514;
+
 }

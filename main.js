@@ -1,9 +1,11 @@
 $(document).ready(function () {
   $('#changeDisplay').click(function () {
     $('#content').html("");
+    $('#content').addClass('change-display');
     changeDisplay();
   })
   $('#dinner').click(function () {
+    $('#content').removeClass();
     $('#content').html("");
     dinner();
   })
@@ -11,6 +13,7 @@ $(document).ready(function () {
     $('#content').load("modaldemo/modal.html");
   })
   $('#posts').click(function () {
+    $('#content').removeClass();
     $.getJSON("http://jsonplaceholder.typicode.com/posts", function (json) {
       $('#content').html("");
       for (let i in json) {
