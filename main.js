@@ -1,4 +1,11 @@
 $(document).ready(function () {
+
+
+  $('#talk').click(function () {
+    $("#talkh1").text("New word");
+
+    
+  })
   $('#changeDisplay').click(function () {
     $('#content').html("");
     $('#content').addClass('change-display');
