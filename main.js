@@ -1,5 +1,11 @@
 $(document).ready(function () {
+  $('#revers').click(function () {
 
+    const bla = $('#talktext').val();
+    const rev = reverseString(bla);
+    $("#talkh1").text(rev);
+
+  })
 
   $('#talk').click(function () {
     const bla = $('#talktext').val();
@@ -44,4 +50,8 @@ function say(text, cssClass) {
   }
 
 
+}
+
+function reverseString(str) {
+  return str.split("").reverse().join("");
 }
