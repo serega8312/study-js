@@ -2,9 +2,10 @@ $(document).ready(function () {
 
 
   $('#talk').click(function () {
-    $("#talkh1").text("New word");
+    const bla = $('#talktext').val();
+    $("#talkh1").text(bla);
 
-    
+
   })
   $('#changeDisplay').click(function () {
     $('#content').html("");
@@ -38,9 +39,9 @@ function say(text, cssClass) {
     $('#content').append(`<div class="card"> <div class="card-body">${text}</div></div>`);
 
   }
-  else{
+  else {
     $('#content').append(`<div class="card ${cssClass}"> <div class="card-body">${text}</div></div>`);
   }
-  
+
 
 }
