@@ -1,6 +1,13 @@
+// мы хотим работать с отрисованым html документом 
+// чтоб мы работали с  html ЭЛЕМЕНТАМИ
+// для этого нужно обработать событие рейди у обьекта документ 
+//  $(document)  jqerry обертка
+// рейди это функция  в которую передаетя безимянная функция
 $(document).ready(function () {
-  $('#revers').click(function () {
 
+  // оброботчик события клик  на html элементс айди revers (пункт-меню) '#revers'
+  //'#revers' пример css селектора по айди
+  $('#revers').click(function () {
     const bla = $('#talktext').val();
     const rev = reverseString(bla);
     $("#talkh1").text(rev);
