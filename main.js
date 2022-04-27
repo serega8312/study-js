@@ -12,6 +12,7 @@ $(document).ready(function () {
   $('#revers').click(function () {
 
     //загнать в константу чило 5
+
     const a = 5;
     const b = "test";
     const c = 7;
@@ -30,13 +31,18 @@ $(document).ready(function () {
     const j = s.age;
     const k = {
       firstName: r.name, lastName: "art",
-      // fullName:function(){
-      //   return
-      // }
+      fullName: function () {
+        return this.firstName + this.lastName;
+      },
+      initials: function () {
+        return this.firstName[0] + this.lastName[0];
+      }
+
 
     }
     //загнать  в константу  html элемент
     const talktext = $('#talktext');
+    //обьявляем костанту присваиваем ей значение текст внутри инпута
     const bla = talktext.val();
     const rev = reverseString(bla);
     $("#talkh1").text(rev);
