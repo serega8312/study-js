@@ -53,11 +53,11 @@ $(document).ready(function () {
 
   // вешаем обработчик на событие клик у элемента с айди толк
   $('#talk').click(function () {
-    // обьявляем константу присваиваем ей присваиваем ей значение инпута '#talktext'
+    // обьявляем константу присваиваем ей  значение инпута '#talktext'
     const bla = $('#talktext').val();
     // вставляем текст в заголовок 
     // заголовок это html элемент с айди talkh1
-    // вызываем функцию текст иоброщаемся к const bla 
+    // вызываем функцию текст и оброщаемся к const bla 
     $("#talkh1").text(bla);
 
 
@@ -65,23 +65,40 @@ $(document).ready(function () {
 
   // вешаем обработчик на событие клик  элемента с айди #changeDisplay
   $('#changeDisplay').click(function () {
-  // отчищаем див контент
+    // отчищаем див контент
     $('#content').html("");
+    //добовляем класс к htmlэлементу '#content
     $('#content').addClass('change-display');
+    // вызываем функцию сhangeDisplay
     changeDisplay();
   })
+
+  //вешаем обработчик на событие клик  элемента с айди '#dinner'
   $('#dinner').click(function () {
+    //удаляем все классы которые относятся к html элементу
     $('#content').removeClass();
+    ////
     $('#content').html("");
+    //вызываем функцию динер
     dinner();
   })
+
+  //вешаем обработчик на событие клик  элемента с айди '#modaldemo'
   $('#modaldemo').click(function () {
+    // мы загружаем  в див контент  modal.html
     $('#content').load("modaldemo/modal.html");
   })
+
+  //вешаем обработчик на событие клик  элемента с айди '#posts'
   $('#posts').click(function () {
+    //удаляем все классы которые относятся к html элементу
     $('#content').removeClass();
+    //получить джейсон
+    // по урл http://jsonplaceholder.typicode.com/posts
     $.getJSON("http://jsonplaceholder.typicode.com/posts", function (json) {
+      // отчищаем див контент
       $('#content').html("");
+      //
       for (let i in json) {
         let post = json[i];
         $('#content').append(`<div class="card"> <div class="card-body">${post.body}</div></div>`);
