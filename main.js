@@ -44,18 +44,28 @@ $(document).ready(function () {
     const talktext = $('#talktext');
     //обьявляем костанту присваиваем ей значение текст внутри инпута
     const bla = talktext.val();
+    //обьявляем константу присваиваем ей  возврат функции reverseString 
     const rev = reverseString(bla);
+    //возврощаем обертку jqeery вставляем текст внутри элемента
     $("#talkh1").text(rev);
 
   })
 
+  // вешаем обработчик на событие клик у элемента с айди толк
   $('#talk').click(function () {
+    // обьявляем константу присваиваем ей присваиваем ей значение инпута '#talktext'
     const bla = $('#talktext').val();
+    // вставляем текст в заголовок 
+    // заголовок это html элемент с айди talkh1
+    // вызываем функцию текст иоброщаемся к const bla 
     $("#talkh1").text(bla);
 
 
   })
+
+  // вешаем обработчик на событие клик  элемента с айди #changeDisplay
   $('#changeDisplay').click(function () {
+  // отчищаем див контент
     $('#content').html("");
     $('#content').addClass('change-display');
     changeDisplay();
