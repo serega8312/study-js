@@ -13,33 +13,7 @@ $(document).ready(function () {
 
     //загнать в константу чило 5
 
-    const a = 5;
-    const b = "test";
-    const c = 7;
-    const d = (a + c) * a;
-    const e = {};
-    const r = {
-      name: 'bob'
-    };
-    const s = {
-      age: 35,
-      name: "bob"
-    };
-    const f = [];
-    const g = [r, s];
-    const h = function () { };
-    const j = s.age;
-    const k = {
-      firstName: r.name, lastName: "art",
-      fullName: function () {
-        return this.firstName + this.lastName;
-      },
-      initials: function () {
-        return this.firstName[0] + this.lastName[0];
-      }
-
-
-    }
+   
     //загнать  в константу  html элемент
     const talktext = $('#talktext');
     //обьявляем костанту присваиваем ей значение текст внутри инпута
@@ -98,9 +72,11 @@ $(document).ready(function () {
     $.getJSON("http://jsonplaceholder.typicode.com/posts", function (json) {
       // отчищаем див контент
       $('#content').html("");
-      //
+      //перебираем  в цикле индексы в масиве джейсон
       for (let i in json) {
+        // юбьявляем переменую пост и присваиваем итый элемент в масиве джейсон
         let post = json[i];
+        //апенд добавление в конец дивника
         $('#content').append(`<div class="card"> <div class="card-body">${post.body}</div></div>`);
 
       }
@@ -109,6 +85,7 @@ $(document).ready(function () {
 
 });
 
+//
 function say(text, cssClass) {
   if (!cssClass) {
     $('#content').append(`<div class="card"> <div class="card-body">${text}</div></div>`);
@@ -123,4 +100,32 @@ function say(text, cssClass) {
 
 function reverseString(str) {
   return str.split("").reverse().join("");
+}
+
+const a = 5;
+const b = "test";
+const c = 7;
+const d = (a + c) * a;
+const e = {};
+const r = {
+  name: 'bob'
+};
+const s = {
+  age: 35,
+  name: "bob"
+};
+const f = [];
+const g = [r, s];
+const h = function () { };
+const j = s.age;
+const k = {
+  firstName: r.name, lastName: "art",
+  fullName: function () {
+    return this.firstName + this.lastName;
+  },
+  initials: function () {
+    return this.firstName[0] + this.lastName[0];
+  }
+
+
 }
