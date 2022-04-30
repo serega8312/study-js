@@ -13,7 +13,7 @@ $(document).ready(function () {
 
     //загнать в константу чило 5
 
-   
+
     //загнать  в константу  html элемент
     const talktext = $('#talktext');
     //обьявляем костанту присваиваем ей значение текст внутри инпута
@@ -83,25 +83,40 @@ $(document).ready(function () {
     });
   })
 
-});
+})
 
-//
+//Обьявляется функция которая выводит текс на экран
 function say(text, cssClass) {
+
+  //если нет значения в переменной cssClass
   if (!cssClass) {
+
+    //апенд добавление в конец дивника
     $('#content').append(`<div class="card"> <div class="card-body">${text}</div></div>`);
 
   }
+  // иначе
   else {
+
+    //апенд добавление в конец дивника
     $('#content').append(`<div class="card ${cssClass}"> <div class="card-body">${text}</div></div>`);
   }
 
 
 }
 
+//функция которая переварачивает значение
 function reverseString(str) {
-  return str.split("").reverse().join("");
+  //
+  const splitted=str.split("");
+  const reversed=splitted.reverse();
+  const joined=reversed.join("")
+  return joined;
+ // return str.split("").reverse().join("");
 }
 
+
+var x=5;
 const a = 5;
 const b = "test";
 const c = 7;
