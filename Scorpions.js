@@ -24,7 +24,7 @@ function colorLine(time) {
     //присваиваем валю в переменую дтс
     let dts = dta.value;
     //приобразовываем в число и присваем в переменую дт
-    let dt = parseFloat(dts);
+    let dt = parseSeconds(dts);
     //если время видео больше чем то которое в атрибуте
     if (time > dt) {
       //цвет текста сделать красным
@@ -32,4 +32,13 @@ function colorLine(time) {
     }
 
   }
+}
+//парсит в секунды из строки в формате ,например "1'22.24"- будет 82.24
+//определяем функцию parseSeconds которая принимает аргумент str
+function parseSeconds(str) {
+  //разрезать строку на минуты и секунды 
+  const splitted = str.split("'");
+  if (splitted.length == 1) return parseFloat(splitted[0]);
+  return splitted[0] * 60 + parseFloat(splitted[1]);
+
 }
