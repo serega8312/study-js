@@ -8,6 +8,8 @@ video.addEventListener('timeupdate', (event) => {
 
 //присваиваем константе все элементы п
 const ps = document.querySelectorAll('p');
+const currentLine = document.getElementById('currentLine');
+const currentLineRu = document.getElementById('currentLineRu');
 //вызываем функцию колорлайн с аргументом time
 function colorLine(time) {
   //цикл по  массиву пс
@@ -29,6 +31,8 @@ function colorLine(time) {
     if (time > dt) {
       //цвет текста сделать красным
       p.style.color = "red";
+      currentLine.innerText = p.innerText;
+      currentLineRu.innerText = p.getAttribute("data-ru");
     }
 
   }
@@ -42,3 +46,5 @@ function parseSeconds(str) {
   return splitted[0] * 60 + parseFloat(splitted[1]);
 
 }
+
+
