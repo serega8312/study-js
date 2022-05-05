@@ -1,20 +1,19 @@
 $(document).ready(function () {
 
- 
-  $('#check').click(function () {
-    if($('#input0').val()=='time'){
-      $('#input0').addClass('bg-success');
-    }
-    else{
-      $('#input0').addClass('bg-danger');
-    }
-    
-    if($('#input1').val()=='love'){
-      $('#input1').addClass('bg-success');
-    }
-    else{
-      $('#input1').addClass('bg-danger');
-    }
 
+  $('#check').click(function () {
+    check('#input0', 'time');
+    check('#input1', 'love');
+    check('#input2', 'there');
   })
 })
+
+function check(inputId, rightValue) {
+  const input = $(inputId);
+  if (input.val() == 'time') {
+    input.addClass('bg-success');
+  }
+  else {
+    input.addClass('bg-danger');
+  }
+}
