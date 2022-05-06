@@ -1,21 +1,25 @@
-const words = ['time', 'love', 'there', 'chance'];
 
+const lines = ['Время~time', 'Любовь~love', 'Там~there', 'Шанс~chance', 'Сдача~change'];
 
 $(document).ready(function () {
 
+  for (let i in lines.reverse()) {
+    line('input' + i, lines[i].split('~')[0]);
+  }
+
   $('#check').click(function () {
 
-    for (let i in words) {
-      check('#input' + i, words[i]);
+    for (let i in lines) {
+      check('#input' + i, lines[i].split('~')[1]);
     }
-    
+
   })
 
 
 
 })
 
-function line(id,label){
+function line(id, label) {
   $('#content').prepend(`
   <div class="form-group row mb-1">
     <label for="staticEmail" class="col-sm-1 col-form-label">${label}</label>
@@ -23,11 +27,8 @@ function line(id,label){
       <input type="text" class="form-control" id="${id}">
     </div>
   </div>`);
+
 }
-line('input0','Время');
-line('input1','Любовь');
-line('input2','Там');
-line('input3','Шанс');
 
 function check(inputId, rightValue) {
   const input = $(inputId);
