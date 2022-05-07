@@ -1,11 +1,18 @@
 
-const lines = ['Время~time', 'Любовь~love', 'Там~there', 'Шанс~chance', 'Сдача~change'];
+
 
 $(document).ready(function () {
+  let lines;
 
-  for (let i in lines.reverse()) {
-    line('input' + i, lines[i].split('~')[0]);
-  }
+  $.getJSON("data/task1.json", function (json) {
+    lines = json;
+
+    for (let i in lines.reverse()) {
+      line('input' + i, lines[i].split('~')[0]);
+    }
+
+
+  });
 
   $('#check').click(function () {
 
