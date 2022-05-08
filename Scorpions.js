@@ -47,4 +47,19 @@ function parseSeconds(str) {
 
 }
 
+function f1(p) {
+  return {
+    ru: p.getAttribute("data-ru"),
+    en: p.innerText,
+    time: p.attributes['data-time']
+  }
+}
+function f2(p) {
+  return `"${p.innerText}~${p.getAttribute("data-ru")}~${p.getAttribute('data-time')}",`
 
+}
+
+for (let i in ps) {
+
+  console.log(f2(ps[i]))
+} 
