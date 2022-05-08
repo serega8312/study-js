@@ -1,8 +1,11 @@
-[
-  "Время~time",
-  "Любовь~love",
-  "Там~there",
-  "Шанс~chance",
-  "Сдача~change",
-  "Bернуть твою любовь~back your love"
-]
+{
+  "header": "Впишите правильный перевод",
+  "lines": [
+    "Время~time",
+    "Любовь~love",
+    "Там~there",
+    "Шанс~chance",
+    "Сдача~change",
+    "Bернуть твою любовь~back your love"
+  ]
+}

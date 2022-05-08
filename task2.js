@@ -1,11 +1,10 @@
 
 
-
 $(document).ready(function () {
 
   let lines;
 
-  $.getJSON("data/task1.json", function (json) {
+  $.getJSON("data/task2.json", function (json) {
     lines = json.lines;
 
     for (let i in lines.reverse()) {
@@ -37,9 +36,7 @@ function line(id, label) {
     </div>
   </div>`);
 
-}
-
-function check(inputId, rightValue) {
+} function check(inputId, rightValue) {
   const input = $(inputId);
   if (input.val().toLowerCase().trim() == rightValue) {
     input.addClass('bg-success');
@@ -48,4 +45,3 @@ function check(inputId, rightValue) {
     input.addClass('bg-danger');
   }
 }
-
