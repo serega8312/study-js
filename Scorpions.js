@@ -7,14 +7,16 @@ video.addEventListener('timeupdate', (event) => {
 });
 
 //присваиваем константе все элементы п
-const ps = document.querySelectorAll('p');
+
 const currentLine = document.getElementById('currentLine');
 const currentLineRu = document.getElementById('currentLineRu');
 //вызываем функцию колорлайн с аргументом time
 function colorLine(time) {
+  const ps = document.querySelectorAll('p');
   //цикл по  массиву пс
   //ай индекс  массива
   for (let i in ps) {
+
     //получаем идекс массива и загоняем в переменную п
     let p = ps[i];
     //проверка на существование атрибута
@@ -59,7 +61,21 @@ function f2(p) {
 
 }
 
-for (let i in ps) {
+// for (let i in ps) {
 
-  console.log(f2(ps[i]))
-} 
+//   console.log(f2(ps[i]))
+// } 
+
+$.getJSON("Scorpions.json", function (json) {
+  
+  for (let i in json) {
+    const a=json[i].split('~')
+    $('#content').append(`<p data-ru="${a[1]}" data-time="${a[2]}">${a[0]}</p>`);
+
+    
+  }
+
+ 
+});
+
+
