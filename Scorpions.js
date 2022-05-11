@@ -49,33 +49,27 @@ function parseSeconds(str) {
 
 }
 
-function f1(p) {
-  return {
-    ru: p.getAttribute("data-ru"),
-    en: p.innerText,
-    time: p.attributes['data-time']
-  }
-}
-function f2(p) {
-  return `"${p.innerText}~${p.getAttribute("data-ru")}~${p.getAttribute('data-time')}",`
+// function f1(p) {
+//   return {
+//     ru: p.getAttribute("data-ru"),
+//     en: p.innerText,
+//     time: p.attributes['data-time']
+//   }
+// }
+// function f2(p) {
+//   return `"${p.innerText}~${p.getAttribute("data-ru")}~${p.getAttribute('data-time')}",`
 
-}
-
-// for (let i in ps) {
-
-//   console.log(f2(ps[i]))
-// } 
-
+//}
 $.getJSON("Scorpions.json", function (json) {
-  
+
   for (let i in json) {
-    const a=json[i].split('~')
+    const a = json[i].split('~')
     $('#content').append(`<p data-ru="${a[1]}" data-time="${a[2]}">${a[0]}</p>`);
 
-    
+
   }
 
- 
+
 });
 
 

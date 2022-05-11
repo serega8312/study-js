@@ -1,37 +1,36 @@
-[
-
-"I want to break free~Я хочу освободиться,~38.80",
-"I want to break free~Я хочу освободиться,~43.98 ",
-"I want to break free from your lies~Я хочу освободиться от твоей лжи.~48.45",
-"You're so self satisfied I don't need you~Ты так удовлетворена собой, ты не нужна мне,~51.59",
-"I've got to break free~Я должен освободиться~57.50",
-"God knows, God knows I want to break free~Бог знает, Бог знает, как я хочу освободиться.~1'03.09",
-
-"I've fallen in love~Я влюбился~1'11.05", 
-"I've fallen in love for the first time~Я влюбился впервые в жизни,~1'15.45",
-"And this time I know it's for real~И я знаю, что на этот раз это по-настоящему.~1'18.15", 
-"I've fallen in love,~Я влюбился,~ 1'24.00",
-"God knows, God knows I've fallen in love~Бог знает, Бог знает, как я влюбился.~1'29.36",
-
-"It's strange but it's true~Это странно, но это правда,~1'39.10",
-"Hey, I can't get over the way you love me like you do~Я не могу свыкнуться с тем, как ты меня любишь~1'42.45",
-"But I have to be sure~Но я хочу быть уверен~1'47.97",
-"When I walk out that door~ Kогда уйду через ту дверь.~1'50.14",
-"Oh how I want to be free, baby~О, как же я хочу быть свободным, детка.~1'53.25",
-"Oh how I want to be free~О, как же я хочу быть свободным.~1'57.48",
-"Oh how I want to break free~О, как же я хочу освободиться.~2'01.22",
-
-"But life still goes on~Но жизнь все же продолжается.~2'33.30", 
-"I can't get used to living without, living without~Но жизнь все же продолжается.~2'33.79",
-"Living without you by my side~К жизни без, жизни без тебя рядом со мной.~2'39.70",
-"I don't want to live alone, hey~Я не хочу прожить в одиночестве, эй,~2'46.87",
-"God knows, got to make it on my own~Бог знает, я должен был сделать это по-своему.~2'52.77",
-"So baby can't you see~Так, детка, разве ты не видишь?~3'01.25",
-"I've got to break free~Я должен освободиться.~3'06.15 ",
-
-"I've got to break free~Я должен освободиться.~3'10.00 ",
-"I want to break free, yeah~Я должен освободиться,~3'13.90",
-"I want, I want, I want, I want to break free~Я хочу, я хочу, я хочу, я хочу освободиться.~3'24.00"
-
-
-]
+{
+  "mediaType":"audio",
+  "mediaSrc":"media/m.mp3",
+  "headerRu":"Я хочу освободиться",
+  "header":"Queen - I Want To Break Free",
+  "lines": [
+    "I want to break free~Я хочу освободиться,~38.80",
+    "I want to break free~Я хочу освободиться,~43.98 ",
+    "I want to break free from your lies~Я хочу освободиться от твоей лжи.~48.45",
+    "You're so self satisfied I don't need you~Ты так удовлетворена собой, ты не нужна мне,~51.59",
+    "I've got to break free~Я должен освободиться~57.50",
+    "God knows, God knows I want to break free~Бог знает, Бог знает, как я хочу освободиться.~1'03.09",
+    "I've fallen in love~Я влюбился~1'11.05",
+    "I've fallen in love for the first time~Я влюбился впервые в жизни,~1'15.45",
+    "And this time I know it's for real~И я знаю, что на этот раз это по-настоящему.~1'18.15",
+    "I've fallen in love,~Я влюбился,~ 1'24.00",
+    "God knows, God knows I've fallen in love~Бог знает, Бог знает, как я влюбился.~1'29.36",
+    "It's strange but it's true~Это странно, но это правда,~1'39.10",
+    "Hey, I can't get over the way you love me like you do~Я не могу свыкнуться с тем, как ты меня любишь~1'42.45",
+    "But I have to be sure~Но я хочу быть уверен~1'47.97",
+    "When I walk out that door~ Kогда уйду через ту дверь.~1'50.14",
+    "Oh how I want to be free, baby~О, как же я хочу быть свободным, детка.~1'53.25",
+    "Oh how I want to be free~О, как же я хочу быть свободным.~1'57.48",
+    "Oh how I want to break free~О, как же я хочу освободиться.~2'01.22",
+    "But life still goes on~Но жизнь все же продолжается.~2'33.30",
+    "I can't get used to living without, living without~Но жизнь все же продолжается.~2'33.79",
+    "Living without you by my side~К жизни без, жизни без тебя рядом со мной.~2'39.70",
+    "I don't want to live alone, hey~Я не хочу прожить в одиночестве, эй,~2'46.87",
+    "God knows, got to make it on my own~Бог знает, я должен был сделать это по-своему.~2'52.77",
+    "So baby can't you see~Так, детка, разве ты не видишь?~3'01.25",
+    "I've got to break free~Я должен освободиться.~3'06.15 ",
+    "I've got to break free~Я должен освободиться.~3'10.00 ",
+    "I want to break free, yeah~Я должен освободиться,~3'13.90",
+    "I want, I want, I want, I want to break free~Я хочу, я хочу, я хочу, я хочу освободиться.~3'24.00"
+  ]
+}

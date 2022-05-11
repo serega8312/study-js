@@ -1,10 +1,5 @@
 //константе присваиваем html элемент 'video'
-const video = document.querySelector('audio');
-//вешаем оброботчик на html элемент video на событие timeupdate
-video.addEventListener('timeupdate', (event) => {
-  //вызываем функцию короллайн и пердаем текущее время видео
-  colorLine(video.currentTime);
-});
+
 
 //присваиваем константе все элементы п
 
@@ -52,13 +47,22 @@ const searchParams = new URLSearchParams(location.search);
 const songId = searchParams.get("v")
 
 $.getJSON(`${songId}.json`, function (json) {
-
-  for (let i in json) {
-    const a = json[i].split('~')
+  $('#song').append(`<${json.mediaType}  src="${json.mediaSrc}" controls></${json.mediaType}>`);
+  $('#currentLine').text(json.header);
+  $('#currentLineRu').text(json.headerRu);
+  document.title = json.header;
+  for (let i in json.lines) {
+    const a = json.lines[i].split('~')
     $('#content').append(`<p data-ru="${a[1]}" data-time="${a[2]}">${a[0]}</p>`);
 
 
   }
 
-
+  const video = document.querySelector(json.mediaType);
+  //вешаем оброботчик на html элемент video на событие timeupdate
+  video.addEventListener('timeupdate', (event) => {
+    //вызываем функцию короллайн и пердаем текущее время видео
+    colorLine(video.currentTime);
+  });
 });
+
