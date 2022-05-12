@@ -46,7 +46,7 @@ function parseSeconds(str) {
 const searchParams = new URLSearchParams(location.search);
 const songId = searchParams.get("v")
 
-$.getJSON(`${songId}.json`, function (json) {
+$.getJSON(`data/${songId }.json`, function (json) {
   $('#song').append(`<${json.mediaType}  src="${json.mediaSrc}" controls></${json.mediaType}>`);
   $('#currentLine').text(json.header);
   $('#currentLineRu').text(json.headerRu);
