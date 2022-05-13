@@ -1,4 +1,7 @@
 {
+  "background": {
+    "color": "grey"
+  },
   "mediaType": "video",
   "mediaSrc": "media/videoplayback.mp4",
   "headerRu": "Все еще люблю тебя",

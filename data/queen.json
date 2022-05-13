@@ -1,4 +1,8 @@
 {
+
+  "background": {
+    "image": "url(https://images3.alphacoders.com/245/thumbbig-245127.webp)"
+  },
   "mediaType":"audio",
   "mediaSrc":"media/m.mp3",
   "headerRu":"Я хочу освободиться",
