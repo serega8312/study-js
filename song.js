@@ -46,7 +46,7 @@ function parseSeconds(str) {
 const searchParams = new URLSearchParams(location.search);
 const songId = searchParams.get("v")
 
-$.getJSON(`data/${songId }.json`, function (json) {
+$.getJSON(`data/${songId}.json`, function (json) {
   $('#song').append(`<${json.mediaType}  src="${json.mediaSrc}" controls></${json.mediaType}>`);
   $('#currentLine').text(json.header);
   $('#currentLineRu').text(json.headerRu);
@@ -65,4 +65,11 @@ $.getJSON(`data/${songId }.json`, function (json) {
     colorLine(video.currentTime);
   });
 });
+
+$.getJSON("data/songs.json", function (json) {
+  for (let i in json) {
+    const song = json[i];
+  $('#songs').append(`<a href="song.html?v=${song.id}" type="button" class="btn btn-outline-dark m-4">${song.name}</a>`);
+}
+})
 
