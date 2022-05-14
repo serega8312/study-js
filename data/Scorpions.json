@@ -1,4 +1,14 @@
 {
+  "tasks": [
+    {
+      "href": "task1.html",
+      "text": "task1"
+    },
+    {
+      "href": "task2.html",
+      "text": "task2"
+    }
+  ],
   "background": {
     "color": "grey"
   },

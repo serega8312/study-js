@@ -50,6 +50,7 @@ $.getJSON(`data/${songId}.json`, function (json) {
 
   if (json.background.image) $("body").attr("style", "background-image:" + json.background.image);
   if (json.background.color) $("body").attr("style", "background-color:" + json.background.color);
+
   $('#song').append(`<${json.mediaType}  src="${json.mediaSrc}" controls></${json.mediaType}>`);
   $('#currentLine').text(json.header);
   $('#currentLineRu').text(json.headerRu);
