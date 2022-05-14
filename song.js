@@ -48,6 +48,13 @@ const songId = searchParams.get("v")
 
 $.getJSON(`data/${songId}.json`, function (json) {
 
+  for (let i in json.tasks) {
+    const task = json.tasks[i]
+    $('#tasks').append(`<li><a class="dropdown-item" href="${task.href}">${task.text}</a></li>`);
+
+
+  }
+
   if (json.background.image) $("body").attr("style", "background-image:" + json.background.image);
   if (json.background.color) $("body").attr("style", "background-color:" + json.background.color);
 
