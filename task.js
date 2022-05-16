@@ -1,11 +1,14 @@
 
 
-
 $(document).ready(function () {
 
   let lines;
 
-  $.getJSON("data/task1.json", function (json) {
+
+  const searchParams = new URLSearchParams(location.search);
+  const taskId = searchParams.get("id")
+
+  $.getJSON(`data/task${taskId}.json`, function (json) {
     lines = json.lines;
 
     for (let i in lines.reverse()) {
@@ -37,15 +40,12 @@ function line(id, label) {
     </div>
   </div>`);
 
-}
-
-function check(inputId, rightValue) {
+} function check(inputId, rightValue) {
   const input = $(inputId);
-  if (input.val().toLowerCase().trim() == rightValue) {
+  if (input.val().toLowerCase().trim() == rightValue.toLowerCase().trim()) {
     input.addClass('bg-success');
   }
   else {
     input.addClass('bg-danger');
   }
 }
-

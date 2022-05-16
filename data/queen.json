@@ -1,15 +1,8 @@
 {
   "tasks": [
+   
     {
-      "href": "task1.html",
-      "text": "task1"
-    },
-    {
-      "href": "task2.html",
-      "text": "task2"
-    },
-    {
-      "href": "task3.html",
+      "href": "task.html?id=3",
       "text": "task3"
     }
   ],
