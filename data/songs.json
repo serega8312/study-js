@@ -6,5 +6,9 @@
   {
     "id": "queen",
     "name": "queen"
+  },
+  {
+    "id": "wall",
+    "name": "pink floid"
   }
 ]

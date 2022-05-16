@@ -1,12 +1,25 @@
 {
-
+  "tasks": [
+    {
+      "href": "task1.html",
+      "text": "task1"
+    },
+    {
+      "href": "task2.html",
+      "text": "task2"
+    },
+    {
+      "href": "task3.html",
+      "text": "task3"
+    }
+  ],
   "background": {
     "image": "url(https://images3.alphacoders.com/245/thumbbig-245127.webp)"
   },
-  "mediaType":"audio",
-  "mediaSrc":"media/m.mp3",
-  "headerRu":"Я хочу освободиться",
-  "header":"Queen - I Want To Break Free",
+  "mediaType": "audio",
+  "mediaSrc": "media/m.mp3",
+  "headerRu": "Я хочу освободиться",
+  "header": "Queen - I Want To Break Free",
   "lines": [
     "I want to break free~Я хочу освободиться,~38.80",
     "I want to break free~Я хочу освободиться,~43.98 ",
